@@ -5,6 +5,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
     project: path.join(__dirname, 'tsconfig.json'),
   },
   plugins: [
@@ -15,6 +19,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended', //
     'next',
     'prettier',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
   ],
   rules: {
     'linebreak-style': [
